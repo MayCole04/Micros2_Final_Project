@@ -1,0 +1,3 @@
+[submodule "Micros2_FinalLab/lib/Micros2_FinalLab/lib/ESP32-A2DP"]
+	path = Micros2_FinalLab/lib/Micros2_FinalLab/lib/ESP32-A2DP
+	url = git@github.com:pschatzmann/ESP32-A2DP.git
