@@ -12,14 +12,21 @@ void config_LCD(TFT_eSPI tft){
     pinMode(DC_pin, OUTPUT);
     pinMode(LED_pin, OUTPUT);
     pinMode(RESET_pin, OUTPUT);
-     pinMode(button3, INPUT);
-     //SPI.begin(); 
-      pinMode(CS_PIN, OUTPUT);
+    
+    pinMode(CS_PIN, OUTPUT);
+    
     digitalWrite(CS_PIN, HIGH);
     digitalWrite(LED_pin, HIGH);
-
-    
     tft.init();
-//tft.setRotation(3);
   
+}
+
+void config_IO(){
+  pinMode(button3_pin, INPUT);
+  pinMode(button2_pin, INPUT);
+  pinMode(button1_pin, INPUT);
+  pinMode(pot_pin, INPUT);
+
+
+
 }

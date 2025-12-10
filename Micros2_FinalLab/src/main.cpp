@@ -1,4 +1,6 @@
 #include "config.h"
+#include "TJpg_Decoder.h"
+#include "Wifi_setup.h"
 
 
 
@@ -11,6 +13,7 @@ void setup(){
 }
 
 void loop(){
+  setupWifi();
   tft.fillScreen(TFT_BLACK);
   tft.drawRect(0, 0, tft.width(), tft.height(), TFT_GREEN);
 
@@ -34,5 +37,8 @@ void loop(){
   tft.println(" Blue text");
 
   delay(5000);
+  //TJpg_Decoder tjpg = TJpg_Decoder();
+  //tjpg.jd_output
+  
   
 }
