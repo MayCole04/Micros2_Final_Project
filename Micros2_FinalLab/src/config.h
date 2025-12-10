@@ -21,4 +21,5 @@ const int pot_pin = 15;
 void config_LCD(TFT_eSPI tft);
 
 
+
     #endif // CONFIG_H

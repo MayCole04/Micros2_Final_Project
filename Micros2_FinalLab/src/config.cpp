@@ -2,6 +2,7 @@
 
 
 
+
 void config_LCD(TFT_eSPI tft){
       // Invoke custom library
     Serial.begin(115200);
@@ -18,7 +19,7 @@ void config_LCD(TFT_eSPI tft){
     digitalWrite(CS_PIN, HIGH);
     digitalWrite(LED_pin, HIGH);
     tft.init();
-  
+    
 }
 
 void config_IO(){
