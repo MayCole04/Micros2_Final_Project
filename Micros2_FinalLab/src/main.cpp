@@ -8,17 +8,11 @@
  TFT_eSPI tft = TFT_eSPI();
 bool play = false;
  
- void setup(){
+void setup(){
   config_LCD(tft);
   //setupWifi();
   tft.setTextColor(TFT_BLACK);
   tft.fillScreen(TFT_WHITE);
-  //tft.drawRect(0, 0, tft.width(), tft.height(), TFT_GREEN);
-  
-
-  TJpgDec.setJpgScale(1);
-  TJpgDec.setSwapBytes(true);
- 
   tft.pushImage(25, 90, 30, 29, rewind_button);
   tft.pushImage(75, 90, 30, 29, foward_button);
    tft.pushImage(50, 90, 30, 29, play_button);
@@ -35,12 +29,18 @@ int temp_vol;
 
 void loop(){
  
-  
 
 if(digitalRead(button2_pin) ==1){
   delay(10);
   if(digitalRead(button2_pin) ==1){
-      while(digitalRead(button2_pin)==1); 
+    bool press = 1;
+    while(press){
+      if(digitalRead(button2_pin) ==0){
+        delay(10);
+        if(digitalRead(button2_pin) ==0)
+          press =0;
+    }
+  }
     play = !play;
     if(play){
       tft.pushImage(50, 90, 30, 29, pause_button);
@@ -51,7 +51,7 @@ if(digitalRead(button2_pin) ==1){
       delay(25);
     }
   }
-  
+  }
  vol =(analogRead(pot_pin)+1)/40.96;
   if(vol != temp_vol){
     tft.setTextColor(TFT_WHITE);
@@ -67,7 +67,7 @@ if(digitalRead(button2_pin) ==1){
 
 
   
-}
+
 
 
 

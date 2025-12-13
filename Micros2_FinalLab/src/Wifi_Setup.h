@@ -3,7 +3,8 @@
 
 #include <Arduino.h>
 #include <WebServer.h>
-
+const char WIFI_SSID[11] =  "PhyllisAnn";
+const char WIFI_PASSWORD[14]= "MichaelGordon";
 extern WebServer server;
 extern String spotifyCode;
 extern bool authComplete;

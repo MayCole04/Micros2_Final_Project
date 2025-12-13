@@ -36,7 +36,7 @@ static uint8_t play_button[] PROGMEM  = {
 };
 
 
-#define PAUSE_BUTTON_HEIGHT 30
+#define PAUSE_BUTTON_HEIGHT 29
 #define PAUSE_BUTTON_WIDTH 30
 
 // array size is 900

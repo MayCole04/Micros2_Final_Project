@@ -4,8 +4,7 @@
 
 #ifndef LED_BUILTIN
 #define LED_BUILTIN    2 //Pin number for the onboard LED
-const char WIFI_SSID[11] =  "PhyllisAnn";
-const char WIFI_PASSWORD[14]= "MichaelGordon";
+
 #endif
 
 WebServer server(80);
