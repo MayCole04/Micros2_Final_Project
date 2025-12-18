@@ -3,8 +3,11 @@
 
 #include <Arduino.h>
 #include <WebServer.h>
-const char WIFI_SSID[11] =  "PhyllisAnn";
-const char WIFI_PASSWORD[14]= "MichaelGordon";
+#include <TFT_eSPI.h>
+
+extern TFT_eSPI tft ;
+extern const char *WIFI_SSID ;
+extern const char *WIFI_PASSWORD;
 extern WebServer server;
 extern String spotifyCode;
 extern bool authComplete;

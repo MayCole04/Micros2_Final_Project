@@ -7,17 +7,22 @@
 
 #endif
 
+
+const char *WIFI_SSID =  "KULABS";
+const char *WIFI_PASSWORD= "WHX434][{c";
 WebServer server(80);
 String spotifyCode;
 bool authComplete = false;
 String IP_ADDRESS = "";
 String REDIRECT_URI;
+ uint8_t bssid[] = {0xE0, 0x1C, 0x41, 0x26, 0x72, 0x55};
 
 void setupWifi(void) {
 
   pinMode(LED_BUILTIN, OUTPUT);
 
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD); //Connect to the WiFi network
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD,0, bssid); //Connect to the WiFi network
+  tft.println("Connecting to: " + String(WIFI_SSID));
   Serial.println("Connecting to: " + String(WIFI_SSID));
 
   while (WiFi.status() != WL_CONNECTED) { //Flash LED while we wait to connect
@@ -25,6 +30,7 @@ void setupWifi(void) {
     delay(500);
     digitalWrite(LED_BUILTIN, LOW);
     delay(500);
+    Serial.println(WiFi.status());
   }
 
   Serial.printf("Signal strength: %d dBm\n", WiFi.RSSI());

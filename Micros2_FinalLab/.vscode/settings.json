@@ -3,5 +3,6 @@
     "files.associations": {
         "esp_bt.h": "c",
         "io_mux_reg.h": "c"
-    }
+    },
+    "cmake.ignoreCMakeListsMissing": true
 }

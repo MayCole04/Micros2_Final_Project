@@ -98,9 +98,10 @@ void updateScreen(String playbackStateJson) {
 void setup(){
   config_LCD(tft);
   config_IO();
-  setupWifi();
   tft.setTextColor(TFT_BLACK);
   tft.fillScreen(TFT_WHITE);
+  setupWifi();
+  
   //tft.pushImage(25, 90, 30, 29, rewind_button);
  // tft.pushImage(75, 90, 30, 29, foward_button);
    //tft.pushImage(50, 90, 30, 29, play_button);
