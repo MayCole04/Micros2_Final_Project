@@ -1,7 +1,8 @@
+
 #include "jsonParse.h"
 #include "config.h"
-#include <ArduinoJson.h>
 
+String SPOTIFY_ACCESS_TOKEN;
 String imageUrl;
 String artists;
 String song;
@@ -30,7 +31,8 @@ void parseAccessToken(String response) {
     if (doc["access_token"] == nullptr) {
         Serial.println("Access token is null");
     }
-
+    //String TEMP_SPOTIFY_ACCESS_TOKEN = String((const char*)doc["access_token"]);
+    //SPOTIFY_ACCESS_TOKEN = TEMP_SPOTIFY_ACCESS_TOKEN.c_str();
     SPOTIFY_ACCESS_TOKEN = String((const char*)doc["access_token"]);
 }
 

@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <Arduino.h>
+#include "config.h"
 
 void requestUserAuthorization(void);
 void requestAccessToken(String code); 

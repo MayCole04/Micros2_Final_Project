@@ -1,13 +1,21 @@
+
 #include "authorizeSpotify.h"
-#include "config.h"
 #include "jsonParse.h"
 #include <WiFiClientSecure.h>
 #include <HTTPClient.h>
+#include "config.h"
 
 String base64Encode(String str);
 
-String SPOTIFY_ACCESS_TOKEN;
+extern String SPOTIFY_ACCESS_TOKEN;
 String authorizeUrl;
+extern const char *CLIENT_ID;
+extern const char *RESPONSE_TYPE;
+extern const char *REDIRECT_URI;
+extern const char *SCOPE;
+extern const char *GRANT_TYPE;
+extern const char *CLIENT_ID;
+extern const char *CLIENT_SECRET;
 
 void requestUserAuthorization(void) {
     String state = generateRandomString(16); //Generate a random string to protect against CSRF attacks

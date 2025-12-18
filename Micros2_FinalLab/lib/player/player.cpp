@@ -4,6 +4,8 @@
 #include <ArduinoJson.h>
 #include <HTTPClient.h>
 
+extern String deviceId;
+extern String SPOTIFY_ACCESS_TOKEN;
 uint16_t currentVolumeValue;
 
 void previousSong() {

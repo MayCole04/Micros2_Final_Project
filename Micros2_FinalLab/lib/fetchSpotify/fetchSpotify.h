@@ -1,6 +1,6 @@
 #ifndef FETCH_SPOTIFY_H
 #define FETCH_SPOTIFY_H
-
+#include "config.h"
 #include <Arduino.h>
 
 extern uint8_t* imageBuffer;

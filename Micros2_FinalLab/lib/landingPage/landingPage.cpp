@@ -1,8 +1,11 @@
 #include "config.h"
 #include "landingPage.h"
-#include "wifiSetup.h"
 #include "Preferences.h"
+#include <WebServer.h>
 
+
+extern String authorizeUrl;
+extern WebServer server;
 Preferences persistantStorage;
 String input = "";
 

@@ -1,7 +1,7 @@
 #ifndef JSONPARSE_H
 #define JSONPARSE_H
 #endif
-
+#include <ArduinoJson.h>
 #include <Arduino.h>
 
 extern String imageUrl;

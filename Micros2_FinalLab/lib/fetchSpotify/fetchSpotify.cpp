@@ -1,9 +1,12 @@
-#include "fetchSpotify.h"
 #include "config.h"
+#include "fetchSpotify.h"
+
 #include "jsonParse.h"
 #include <HTTPClient.h>
 #include <WiFiClient.h>
 
+extern String SPOTIFY_ACCESS_TOKEN;
+extern const char *SPOTIFY_API_URL;
 uint8_t* imageBuffer = nullptr;
 size_t imageSize = 0;
 String playbackStateJson;
@@ -17,8 +20,8 @@ String fetchSpotifyPlaylist() {
   String response;
   if (https.begin(url)) {
     //Setup headers for GET request
-    String authHeader = "Bearer " + SPOTIFY_ACCESS_TOKEN;
-
+    String authHeader = "Bearer " +  SPOTIFY_ACCESS_TOKEN;
+      
     //Add headers to http request
     https.addHeader("Authorization", authHeader);
 
